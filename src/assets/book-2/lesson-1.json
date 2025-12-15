@@ -1,0 +1,40 @@
+{
+    "title": {"en":"A private conversation","zh":""},
+    "audio": "01－A Private Conversation.mp3",
+    "sentences": [
+    {
+        "en": "Last week I went to the theatre. I had a very good seat.",
+        "start": 15.394638,
+        "end": 21.930388
+    },
+    {
+        "en": "The play was very interesting. I did not enjoy it.",
+        "start": 21.930388,
+        "end": 27.226137
+    },
+    {
+        "en": "A young man and a young woman were sitting behind me.",
+        "start": 27.226137,
+        "end": 31.874039
+    },
+    {
+        "en": "They were talking loudly. I got very angry. I could not hear the actors.",
+        "start": 31.874039,
+        "end": 40.449452
+    },
+    {
+        "en": "I turned round. I looked at the man and the woman angrily. They did not pay any attention.",
+        "start": 40.449452,
+        "end": 50.104868
+    },
+    {
+        "en": "In the end, I could not bear it. I turned round again. 'I can't hear a word!' I said angrily.",
+        "start": 50.104868,
+        "end": 263.056388
+    },
+    {
+        "en": "Its none of your business,' the young man said rudely. 'This is a private conversation!'.",
+        "start": 63.056388,
+        "end": 72.199237
+    }
+]}

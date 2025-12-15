@@ -1,0 +1,506 @@
+[
+    {
+        "id": 1,
+        "en": "Unit One",
+        "lessons": [
+            {
+                "id": 1,
+                "en": "A private conversation",
+                "zh": "私人谈话"
+            },
+            {
+                "id": 2,
+                "en": "Breakfast or lunch?",
+                "zh": "早餐还是午餐？"
+            },
+            {
+                "id": 3,
+                "en": "Please send me a card",
+                "zh": "请给我寄一张明信片"
+            },
+            {
+                "id": 4,
+                "en": "An exciting trip",
+                "zh": "激动人心的旅行"
+            },
+            {
+                "id": 5,
+                "en": "No wrong numbers",
+                "zh": "无错号之虞"
+            },
+            {
+                "id": 6,
+                "en": "Percy Buttions ",
+                "zh": "珀西·巴顿斯"
+            },
+            {
+                "id": 7,
+                "en": "Too late ",
+                "zh": "为时太晚"
+            },
+            {
+                "id": 8,
+                "en": "The best and the worst ",
+                "zh": "最好的和最差的"
+            },
+            {
+                "id": 9,
+                "en": "A cold welcome ",
+                "zh": "冷遇"
+            },
+            {
+                "id": 10,
+                "en": "Not for jazz ",
+                "zh": "不适于演奏爵士乐"
+            },
+            {
+                "id": 11,
+                "en": "One good turn deserves another ",
+                "zh": "礼尚往来"
+            },
+            {
+                "id": 12,
+                "en": "Goodbye and good luck ",
+                "zh": "再见，一路顺风"
+            },
+            {
+                "id": 13,
+                "en": "The Greenwood Boys ",
+                "zh": "绿林少年"
+            },
+            {
+                "id": 14,
+                "en": "Do you speak English? ",
+                "zh": "你会讲英语吗？"
+            },
+            {
+                "id": 15,
+                "en": "Good news ",
+                "zh": "佳音"
+            },
+            {
+                "id": 16,
+                "en": "A polite request ",
+                "zh": "彬彬有礼的要求"
+            },
+            {
+                "id": 17,
+                "en": "Always young ",
+                "zh": "青春常驻"
+            },
+            {
+                "id": 18,
+                "en": "He often does this! ",
+                "zh": "他经常干这种事！"
+            },
+            {
+                "id": 19,
+                "en": "Sold out ",
+                "zh": "票已售完"
+            },
+            {
+                "id": 20,
+                "en": "One man in a boat ",
+                "zh": "独坐孤舟"
+            },
+            {
+                "id": 21,
+                "en": "Mad or not? ",
+                "zh": "是不是疯了？"
+            },
+            {
+                "id": 22,
+                "en": "A glass envelope ",
+                "zh": "玻璃信封"
+            },
+            {
+                "id": 23,
+                "en": "A new house ",
+                "zh": "新居"
+            },
+            {
+                "id": 24,
+                "en": "It could be worse ",
+                "zh": "不幸中之万幸"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "en": "Unit Two",
+        "lessons": [
+            {
+                "id": 25,
+                "en": "Do the English speak English? ",
+                "zh": "英国人讲的是英语吗？"
+            },
+            {
+                "id": 26,
+                "en": "The best art critics ",
+                "zh": "最佳美术评论家"
+            },
+            {
+                "id": 27,
+                "en": "A wet night ",
+                "zh": "雨夜"
+            },
+            {
+                "id": 28,
+                "en": "No parking ",
+                "zh": "禁止停车"
+            },
+            {
+                "id": 29,
+                "en": "Taxi! ",
+                "zh": "出租汽车！"
+            },
+            {
+                "id": 30,
+                "en": "Football or polo?",
+                "zh": " 足球还是水球？"
+            },
+            {
+                "id": 31,
+                "en": "Success story ",
+                "zh": "成功者的故事"
+            },
+            {
+                "id": 32,
+                "en": "Shopping made easy ",
+                "zh": "购物变得很方便"
+            },
+            {
+                "id": 33,
+                "en": "Out of the darkness ",
+                "zh": "冲出黑暗"
+            },
+            {
+                "id": 34,
+                "en": "Quick work ",
+                "zh": "破案“神速”"
+            },
+            {
+                "id": 35,
+                "en": "Stop thief! ",
+                "zh": "捉贼"
+            },
+            {
+                "id": 36,
+                "en": "Across the Channel ",
+                "zh": "横渡海峡"
+            },
+            {
+                "id": 37,
+                "en": "The Olympic Games",
+                "zh": "奥林匹克运动会"
+            },
+            {
+                "id": 38,
+                "en": "Everything except the weather ",
+                "zh": "唯独没有考虑到天气"
+            },
+            {
+                "id": 39,
+                "en": "Am I all right? ",
+                "zh": "我是否痊愈？"
+            },
+            {
+                "id": 40,
+                "en": "Food and talk ",
+                "zh": ""
+            },
+            {
+                "id": 41,
+                "en": "Do you call that a hat? ",
+                "zh": "你把那个叫帽子吗？"
+            },
+            {
+                "id": 42,
+                "en": "Not very musical ",
+                "zh": "并非很懂音乐"
+            },
+            {
+                "id": 43,
+                "en": "Over the South Pole ",
+                "zh": "飞越南极"
+            },
+            {
+                "id": 44,
+                "en": "Through the forest ",
+                "zh": "穿过森林"
+            },
+            {
+                "id": 45,
+                "en": "A clear conscience ",
+                "zh": "问心无愧"
+            },
+            {
+                "id": 46,
+                "en": "Expensive and uncomfortable ",
+                "zh": "既昂贵又受罪"
+            },
+            {
+                "id": 47,
+                "en": "A thirsty ghost ",
+                "zh": "嗜酒的鬼魂"
+            },
+            {
+                "id": 48,
+                "en": "Did you want to tell me something? ",
+                "zh": "你想对我说什么吗？"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "en": "Unit Three",
+        "lessons": [
+            {
+                "id": 49,
+                "en": "The end of a dream",
+                "zh": " 美梦告终"
+            },
+            {
+                "id": 50,
+                "en": "Taken for a ride ",
+                "zh": "乘车兜风"
+            },
+            {
+                "id": 51,
+                "en": "Reward for virtue ",
+                "zh": "对美德的奖赏"
+            },
+            {
+                "id": 52,
+                "en": "A pretty carpet ",
+                "zh": "漂亮的地毯"
+            },
+            {
+                "id": 53,
+                "en": "Hot snake ",
+                "zh": "触电的蛇"
+            },
+            {
+                "id": 54,
+                "en": "Sticky fingers ",
+                "zh": "粘糊的手指"
+            },
+            {
+                "id": 55,
+                "en": "Not a gold mine ",
+                "zh": "并非金矿"
+            },
+            {
+                "id": 56,
+                "en": "Faster than sound! ",
+                "zh": "比声音还快！"
+            },
+            {
+                "id": 57,
+                "en": "Can I help you, madam? ",
+                "zh": "你要买什么，夫人？"
+            },
+            {
+                "id": 58,
+                "en": "A blessing in disguise? ",
+                "zh": "是因祸得福吗？"
+            },
+            {
+                "id": 59,
+                "en": "In or out? ",
+                "zh": "进来还是出去？"
+            },
+            {
+                "id": 60,
+                "en": "The future ",
+                "zh": "卜算未来"
+            },
+            {
+                "id": 61,
+                "en": "Trouble with the Hubble ",
+                "zh": "哈勃望远镜的困境"
+            },
+            {
+                "id": 62,
+                "en": "After the fire ",
+                "zh": "大火之后"
+            },
+            {
+                "id": 63,
+                "en": "She was not amused ",
+                "zh": "她并不觉得好笑"
+            },
+            {
+                "id": 64,
+                "en": "The Channel Tunnel ",
+                "zh": "海峡隧道"
+            },
+            {
+                "id": 65,
+                "en": "Jumbo versus the police ",
+                "zh": "小象对警察"
+            },
+            {
+                "id": 66,
+                "en": "Sweet as honey! ",
+                "zh": "像蜜一样甜！"
+            },
+            {
+                "id": 67,
+                "en": "Volcanoes ",
+                "zh": "火山"
+            },
+            {
+                "id": 68,
+                "en": "Persistent ",
+                "zh": "纠缠不休"
+            },
+            {
+                "id": 69,
+                "en": "But not murder! ",
+                "zh": "并非谋杀！"
+            },
+            {
+                "id": 70,
+                "en": "Red for danger ",
+                "zh": "危险的红色"
+            },
+            {
+                "id": 71,
+                "en": "A famous clock ",
+                "zh": "一个著名的大钟"
+            },
+            {
+                "id": 72,
+                "en": "A car called Bluebird ",
+                "zh": "“蓝鸟”汽车"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "en": "Unit Four",
+        "lessons": [
+            {
+                "id": 73,
+                "en": "The record-holder",
+                "zh": " 纪录保持者"
+            },
+            {
+                "id": 74,
+                "en": "Out of the limelight ",
+                "zh": "舞台之外"
+            },
+            {
+                "id": 75,
+                "en": "SOS ",
+                "zh": "呼救信号"
+            },
+            {
+                "id": 76,
+                "en": "April Fools' Day ",
+                "zh": "愚人节"
+            },
+            {
+                "id": 77,
+                "en": "A successful operation ",
+                "zh": "一例成功的手术"
+            },
+            {
+                "id": 78,
+                "en": "The last one? ",
+                "zh": "最后一枝吗?"
+            },
+            {
+                "id": 79,
+                "en": "By air ",
+                "zh": ""
+            },
+            {
+                "id": 80,
+                "en": "The Crystal Palace",
+                "zh": "水晶宫"
+            },
+            {
+                "id": 81,
+                "en": "Escape ",
+                "zh": "逃脱"
+            },
+            {
+                "id": 82,
+                "en": "Monster or fish? ",
+                "zh": "是妖还是鱼?"
+            },
+            {
+                "id": 83,
+                "en": "After the election ",
+                "zh": "大选之后"
+            },
+            {
+                "id": 84,
+                "en": "On strike ",
+                "zh": "罢工"
+            },
+            {
+                "id": 85,
+                "en": "Never too old to learn ",
+                "zh": "活到老学到老"
+            },
+            {
+                "id": 86,
+                "en": "Out of control ",
+                "zh": "失控"
+            },
+            {
+                "id": 87,
+                "en": "A perfect alibi ",
+                "zh": "极好的不在犯罪现场的证据"
+            },
+            {
+                "id": 88,
+                "en": "Trapped in a mine ",
+                "zh": "困在矿井里"
+            },
+            {
+                "id": 89,
+                "en": "A slip of the tongue ",
+                "zh": "口误"
+            },
+            {
+                "id": 90,
+                "en": "What's for supper? ",
+                "zh": "晚餐吃什么?"
+            },
+            {
+                "id": 91,
+                "en": "Three men in a basket ",
+                "zh": "三人同篮"
+            },
+            {
+                "id": 92,
+                "en": "Asking for trouble ",
+                "zh": "自找麻烦"
+            },
+            {
+                "id": 93,
+                "en": "A noble gift ",
+                "zh": "崇高的礼物"
+            },
+            {
+                "id": 94,
+                "en": "Future champions ",
+                "zh": "未来的冠军"
+            },
+            {
+                "id": 95,
+                "en": "A fantasy ",
+                "zh": "纯属虚构"
+            },
+            {
+                "id": 96,
+                "en": "The dead return ",
+                "zh": "亡灵返乡"
+            }
+        ]
+    }
+]

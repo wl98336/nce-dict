@@ -39,7 +39,7 @@ export class BookService {
     this.loadBookList();
   }
   private loadBookList(): void {
-    this.httpService.get(environment.bookListUrl).subscribe({
+    this.httpService.get(environment.booksApi).subscribe({
       next: (data) => {
         this.bookList = data as Book[];
         this.bookListSg.set(this.bookList);
@@ -51,7 +51,7 @@ export class BookService {
   }
 
   loadBookUnits(id: number): Observable<BookUnit[]> {
-    return this.httpService.get<BookUnit[]>('./assets/nce' + id + '/units.json');
+    return this.httpService.get<BookUnit[]>(`./assets/book-${id}/units.json`);
   }
 
   loadBookAudioInfo(id: number): Observable<Map<string, string>> {
@@ -69,11 +69,11 @@ export class BookService {
   }
 
   loadBookNewWords(id: number): Observable<LessonNewWords[]> {
-    return this.httpService.get<LessonNewWords[]>('./assets/nce' + id + '/words.json');
+    return this.httpService.get<LessonNewWords[]>(`./assets/book-${id}/words.json`);
   }
 
   loadBookNotes(id: number): Observable<Map<number, string>> {
-    return this.httpService.get('./assets/notes/NCE' + id + '.md', { responseType: 'text' }).pipe(
+    return this.httpService.get(`./assets/book-${id}/notes.md`, { responseType: 'text' }).pipe(
       map((data) => {
         const lessons = data.split(new RegExp('# Lesson', 'i'));
         const lessonNotes = lessons.reduce((lessonNotes: Map<number, string>, lesson) => {

@@ -3,23 +3,20 @@
         "id": 1,
         "zh": "新概念第一册",
         "en": "First Things First",
-        "audio": true
+        "path": "book-1"
     },{
         "id": 2,
         "zh": "新概念第二册",
-        "en": "Practice & Progress",
-        "audio": true
+        "en": "Practice & Progress"
     },
     {
         "id": 3,
         "zh": "新概念第三册",
-        "en": "Developing Skills",
-        "audio": false
+        "en": "Developing Skills"
     },
     {
         "id": 4,
         "zh": "新概念第四册",
-        "en": "Fluency in English",
-        "audio": true
+        "en": "Fluency in English"
     }
 ]

@@ -1,0 +1,736 @@
+[
+    {
+        "id": 1,
+        "en": "part 1",
+        "zh": "第一部分",
+        "lessons": [
+            {
+                "id": 1,
+                "en": "Excuse me！",
+                "zh": "对不起！"
+            },
+            {
+                "id": 2,
+                "en": "Is this your…？",
+                "zh": "这是你的……吗？"
+            },
+            {
+                "id": 3,
+                "en": "Sorry，sir. ",
+                "zh": "对不起，先生。"
+            },
+            {
+                "id": 4,
+                "en": "Is this your…；",
+                "zh": "这是你的……吗？"
+            },
+            {
+                "id": 5,
+                "en": "Nice to meet you.",
+                "zh": " 很高兴见到你。"
+            },
+            {
+                "id": 6,
+                "en": "What make is it？",
+                "zh": "它是什么牌子的？"
+            },
+            {
+                "id": 7,
+                "en": "Are you a teacher？",
+                "zh": "你是教师吗？"
+            },
+            {
+                "id": 8,
+                "en": "What's your job？",
+                "zh": "你是做什么工作的？"
+            },
+            {
+                "id": 9,
+                "en": "How are you today？",
+                "zh": "你今天好吗？"
+            },
+            {
+                "id": 10,
+                "en": "Look at…",
+                "zh": " 看……"
+            },
+            {
+                "id": 11,
+                "en": "Is this your shirt？",
+                "zh": "这是你的衬衫吗？"
+            },
+            {
+                "id": 12,
+                "en": "Whose is this…？This is my/your/his/her… Whose is that…？That is my/your/his/her…",
+                "zh": "这……是谁的？这是我的/你 的/他的/她的…… 那……是谁的？那是我的/ 你的/他的/她的……"
+            },
+            {
+                "id": 13,
+                "en": "A new dress",
+                "zh": " 一件新连衣裙"
+            },
+            {
+                "id": 14,
+                "en": "What colour is your…？",
+                "zh": "你的……是什么颜色的？"
+            },
+            {
+                "id": 15,
+                "en": "Your passports，please.",
+                "zh": " 请出示你们的护照。"
+            },
+            {
+                "id": 16,
+                "en": "Are you…",
+                "zh": " 你们是……吗？"
+            },
+            {
+                "id": 17,
+                "en": "How do you do？",
+                "zh": "你好！"
+            },
+            {
+                "id": 18,
+                "en": "What are their jobs？",
+                "zh": "他们是做什么工作的？"
+            },
+            {
+                "id": 19,
+                "en": "Tired and thirsty",
+                "zh": " 又累又渴"
+            },
+            {
+                "id": 20,
+                "en": "Look at them！",
+                "zh": "看看他/它们！"
+            },
+            {
+                "id": 21,
+                "en": "Which book？",
+                "zh": "哪一本书？"
+            },
+            {
+                "id": 22,
+                "en": "Give me/him/her/us/them a… ……Which one？",
+                "zh": "给我/他/她/我们/他们 哪—个……？"
+            },
+            {
+                "id": 23,
+                "en": "Which glasses？",
+                "zh": "哪几只杯子？"
+            },
+            {
+                "id": 24,
+                "en": "Give me/him/her/us/them some… Which ones？",
+                "zh": "给我/他/她/我们/他们一些…… 哪些？"
+            },
+            {
+                "id": 25,
+                "en": "Mrs.Smith's kitchen ",
+                "zh": "史密斯太太的厨房"
+            },
+            {
+                "id": 26,
+                "en": "Where is it？",
+                "zh": "它在哪里？"
+            },
+            {
+                "id": 27,
+                "en": "Mrs.Smith's living room ",
+                "zh": "史密斯太太的客厅"
+            },
+            {
+                "id": 28,
+                "en": "Where are they？",
+                "zh": "它们在哪里无前例？"
+            },
+            {
+                "id": 29,
+                "en": "Come in，Amy. ",
+                "zh": "进来，艾米。"
+            },
+            {
+                "id": 30,
+                "en": "What must l do？",
+                "zh": "我应该做什么？"
+            },
+            {
+                "id": 31,
+                "en": "Where's Sally？",
+                "zh": "萨莉在哪里？"
+            },
+            {
+                "id": 32,
+                "en": "What's he/she/it doing？",
+                "zh": "他/她/它正在做什么？"
+            },
+            {
+                "id": 33,
+                "en": "A fine day ",
+                "zh": "晴天"
+            },
+            {
+                "id": 34,
+                "en": "What are they doing？",
+                "zh": "他们在做什么？"
+            },
+            {
+                "id": 35,
+                "en": "Our village ",
+                "zh": "我们的村庄"
+            },
+            {
+                "id": 36,
+                "en": "Where…？",
+                "zh": "……在哪里？"
+            },
+            {
+                "id": 37,
+                "en": "Making a bookcase ",
+                "zh": "做书架"
+            },
+            {
+                "id": 38,
+                "en": "What are you going to do？What are you doing now？",
+                "zh": "你准备做什么？你现在正在做什么？"
+            },
+            {
+                "id": 39,
+                "en": "Don’t drop it！",
+                "zh": "别摔了！"
+            },
+            {
+                "id": 40,
+                "en": "What are you going to do？I'm going to… ",
+                "zh": "你准备做什么？我准备……"
+            },
+            {
+                "id": 41,
+                "en": "Penny's bag ",
+                "zh": "彭妮的提包"
+            },
+            {
+                "id": 42,
+                "en": "Is there a…in/on that…？Is there any…in/on that…？",
+                "zh": "在那个……中/上有一个……吗？在那个……中/上有……吗？"
+            },
+            {
+                "id": 43,
+                "en": "Hurry up！",
+                "zh": "快点！"
+            },
+            {
+                "id": 44,
+                "en": "Are there any…? Is there any…?",
+                "zh": "有……吗？ 有……吗？"
+            },
+            {
+                "id": 45,
+                "en": "The boss's letter ",
+                "zh": "老板的信"
+            },
+            {
+                "id": 46,
+                "en": "Can you…? ",
+                "zh": "你能……吗？"
+            },
+            {
+                "id": 47,
+                "en": "A cup of coffee ",
+                "zh": "一杯咖啡"
+            },
+            {
+                "id": 48,
+                "en": "Do you like…？Do you want…？",
+                "zh": "你喜欢……吗？你想要……吗？"
+            },
+            {
+                "id": 49,
+                "en": "At the butcher's ",
+                "zh": "在肉店"
+            },
+            {
+                "id": 50,
+                "en": "He likes… he doesn't like…",
+                "zh": "他喜欢……But  但是他不喜欢……"
+            },
+            {
+                "id": 51,
+                "en": "A pleasant climate ",
+                "zh": "宜人的气候"
+            },
+            {
+                "id": 52,
+                "en": "what nationality are they？Where do thev come from？",
+                "zh": "他们是哪国人？他们来自哪个国家？"
+            },
+            {
+                "id": 53,
+                "en": "An interesting climate ",
+                "zh": "有趣的气候"
+            },
+            {
+                "id": 54,
+                "en": "What nationality are they? Where do they come from?",
+                "zh": "他们是哪国人？ 他们来自哪个国家？"
+            },
+            {
+                "id": 55,
+                "en": "The Sawyer family ",
+                "zh": "索耶一家人"
+            },
+            {
+                "id": 56,
+                "en": "What do they usually do？",
+                "zh": "他们通常做什么？"
+            },
+            {
+                "id": 57,
+                "en": "An unusual day ",
+                "zh": "不平常的一天"
+            },
+            {
+                "id": 58,
+                "en": "What's the time？",
+                "zh": "几点钟？"
+            },
+            {
+                "id": 59,
+                "en": "Is that all？",
+                "zh": "就这些吗？"
+            },
+            {
+                "id": 60,
+                "en": "What's the time？",
+                "zh": "几点钟？"
+            },
+            {
+                "id": 61,
+                "en": "A bad cold ",
+                "zh": "重感冒"
+            },
+            {
+                "id": 62,
+                "en": "What's the matter with them？What must they do？",
+                "zh": "他们怎么啦？他们该怎么办？"
+            },
+            {
+                "id": 63,
+                "en": "Thank you，doctor. ",
+                "zh": "谢谢你，医生。"
+            },
+            {
+                "id": 64,
+                "en": "Don’t…！You mustn't…！",
+                "zh": "不要……！你不应该……！"
+            },
+            {
+                "id": 65,
+                "en": "Not a baby ",
+                "zh": "不是小孩子"
+            },
+            {
+                "id": 66,
+                "en": "What's the time？",
+                "zh": "几点钟？"
+            },
+            {
+                "id": 67,
+                "en": "The weekend ",
+                "zh": "周末"
+            },
+            {
+                "id": 68,
+                "en": "What's the time？",
+                "zh": "几点钟？"
+            },
+            {
+                "id": 69,
+                "en": "The car race ",
+                "zh": "汽车比赛"
+            },
+            {
+                "id": 70,
+                "en": "When were they there？",
+                "zh": "他们是什么时候在那里的？"
+            },
+            {
+                "id": 71,
+                "en": "He's awful！",
+                "zh": "他讨厌透了！"
+            },
+            {
+                "id": 72,
+                "en": "When did you…？ Can you do this test？",
+                "zh": "你什么时候……？你能完成以下测试吗？"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "en": "part 2",
+        "zh": "第二部分",
+        "lessons": [
+            {
+                "id": 73,
+                "en": "The way to King Street ",
+                "zh": "到国王街的走法"
+            },
+            {
+                "id": 74,
+                "en": "What did they do？",
+                "zh": "他们干了什么？"
+            },
+            {
+                "id": 75,
+                "en": "Uncomfortable shoes ",
+                "zh": "不舒适的鞋子"
+            },
+            {
+                "id": 76,
+                "en": "When did you…？",
+                "zh": "你什么时候……？"
+            },
+            {
+                "id": 77,
+                "en": "Terrible toothache",
+                "zh": " 要命的牙痛"
+            },
+            {
+                "id": 78,
+                "en": "When did you…？",
+                "zh": "你什么时候……？"
+            },
+            {
+                "id": 79,
+                "en": "Carol's shopping list ",
+                "zh": "卡罗尔的购物单"
+            },
+            {
+                "id": 80,
+                "en": "I must go to the… ",
+                "zh": "我必须去……"
+            },
+            {
+                "id": 81,
+                "en": "Roast beef and potatoes ",
+                "zh": "烤牛肉和土豆"
+            },
+            {
+                "id": 82,
+                "en": "I had… ",
+                "zh": "我吃 (喝、从事) 了……"
+            },
+            {
+                "id": 83,
+                "en": "Going on holiday ",
+                "zh": "度假"
+            },
+            {
+                "id": 84,
+                "en": "Have you had…? ",
+                "zh": "你已经……了吗？"
+            },
+            {
+                "id": 85,
+                "en": "Paris in the spring ",
+                "zh": "巴黎之春"
+            },
+            {
+                "id": 86,
+                "en": "What have you done？",
+                "zh": "你已经做了什么？"
+            },
+            {
+                "id": 87,
+                "en": "A car crash ",
+                "zh": "车祸"
+            },
+            {
+                "id": 88,
+                "en": "Have you…yet？",
+                "zh": "你已经……了吗？"
+            },
+            {
+                "id": 89,
+                "en": "For sale ",
+                "zh": "待售"
+            },
+            {
+                "id": 90,
+                "en": "Have you…yet？",
+                "zh": "你已经……了吗？"
+            },
+            {
+                "id": 91,
+                "en": "Poor Ian！",
+                "zh": "可怜的伊恩！"
+            },
+            {
+                "id": 92,
+                "en": "When will…？",
+                "zh": "什么时候要……？"
+            },
+            {
+                "id": 93,
+                "en": "Our new neighbour ",
+                "zh": "我们的新邻居"
+            },
+            {
+                "id": 94,
+                "en": "When did you/will you go to…？",
+                "zh": "你过去/将在什么时候去……？"
+            },
+            {
+                "id": 95,
+                "en": "Tickets，please. ",
+                "zh": "请把车票拿出来。"
+            },
+            {
+                "id": 96,
+                "en": "What's the exact time？",
+                "zh": "确切的时间是几点？"
+            },
+            {
+                "id": 97,
+                "en": "A small blue case ",
+                "zh": "一只蓝色的小箱子"
+            },
+            {
+                "id": 98,
+                "en": "Whose is it？",
+                "zh": "它是谁的？Whose are they？它们是谁的？"
+            },
+            {
+                "id": 99,
+                "en": "OW！",
+                "zh": "啊哟！"
+            },
+            {
+                "id": 100,
+                "en": "He says that…She says that…They say that… ",
+                "zh": "他/她/他们说……"
+            },
+            {
+                "id": 101,
+                "en": "A card from Jimmy ",
+                "zh": "吉米的明信片"
+            },
+            {
+                "id": 102,
+                "en": "He says he…She says she…They say they… ",
+                "zh": "他/她/他们说他/她/他们……"
+            },
+            {
+                "id": 103,
+                "en": "The French test ",
+                "zh": "法语考试"
+            },
+            {
+                "id": 104,
+                "en": "Too，very，enough ",
+                "zh": "太、非常、足够"
+            },
+            {
+                "id": 105,
+                "en": "Full of mistakes ",
+                "zh": "错误百出"
+            },
+            {
+                "id": 106,
+                "en": "I want you/him/her/them to… Tell him/her/them to…",
+                "zh": "我要你/他/她/他们…… 告诉他/她/他们……"
+            },
+            {
+                "id": 107,
+                "en": "It's too small. ",
+                "zh": "太小了。"
+            },
+            {
+                "id": 108,
+                "en": "How do they compare？",
+                "zh": "比一比"
+            },
+            {
+                "id": 109,
+                "en": "A good idea ",
+                "zh": "好主意"
+            },
+            {
+                "id": 110,
+                "en": "How do they compare？",
+                "zh": "比一比"
+            },
+            {
+                "id": 111,
+                "en": "The most expensive model ",
+                "zh": "最昂贵的型号"
+            },
+            {
+                "id": 112,
+                "en": "How do they compare？",
+                "zh": "比一比"
+            },
+            {
+                "id": 113,
+                "en": "Small change ",
+                "zh": "零钱"
+            },
+            {
+                "id": 114,
+                "en": "I've got none. ",
+                "zh": "我没有。"
+            },
+            {
+                "id": 115,
+                "en": "Knock，knock！",
+                "zh": "敲敲门！"
+            },
+            {
+                "id": 116,
+                "en": "Every，no，any and some ",
+                "zh": "每一、无、若干和一些"
+            },
+            {
+                "id": 117,
+                "en": "Tommy’s breakfast ",
+                "zh": "汤米的早餐"
+            },
+            {
+                "id": 118,
+                "en": "What were you doing？",
+                "zh": "你那时正在做什么？"
+            },
+            {
+                "id": 119,
+                "en": "A true story ",
+                "zh": "一个真实的故事"
+            },
+            {
+                "id": 120,
+                "en": "It had already happened. ",
+                "zh": "事情已经发生了。"
+            },
+            {
+                "id": 121,
+                "en": "The man in a hat ",
+                "zh": "戴帽子的男士"
+            },
+            {
+                "id": 122,
+                "en": "Who (whom) ，which and that ",
+                "zh": "关系代词"
+            },
+            {
+                "id": 123,
+                "en": "A trip to Australia ",
+                "zh": "澳大利亚之行"
+            },
+            {
+                "id": 124,
+                "en": "(Who)/(whom)，(which) and (that)",
+                "zh": "关系代词"
+            },
+            {
+                "id": 125,
+                "en": "Tea for two ",
+                "zh": "两个人一起喝茶"
+            },
+            {
+                "id": 126,
+                "en": "Have to and do not need to ",
+                "zh": "不得不和不必要"
+            },
+            {
+                "id": 127,
+                "en": "A famous actress ",
+                "zh": "著名的女演员"
+            },
+            {
+                "id": 128,
+                "en": "He can’t be… He must be…",
+                "zh": "他不可能…… 他肯定是……"
+            },
+            {
+                "id": 129,
+                "en": "Seventy miles an hour ",
+                "zh": "时速70英里"
+            },
+            {
+                "id": 130,
+                "en": "He can’t have been… He must have been…",
+                "zh": "他那时不可能…… 他那时肯定是……"
+            },
+            {
+                "id": 131,
+                "en": "Don’t be so sure！",
+                "zh": "别那么肯定！"
+            },
+            {
+                "id": 132,
+                "en": "He may be… He may have been… I'm not sure",
+                "zh": "他可能是…… 他可能已经…… 我不敢肯定。"
+            },
+            {
+                "id": 133,
+                "en": "Sensational news！",
+                "zh": "爆炸性新闻！"
+            },
+            {
+                "id": 134,
+                "en": "He said (that) he… He told me (that) he…",
+                "zh": "他曾说他…… 他曾告诉我说他……"
+            },
+            {
+                "id": 135,
+                "en": "The latest report ",
+                "zh": "最新消息"
+            },
+            {
+                "id": 136,
+                "en": "He said (that) he… He told me (that) he…",
+                "zh": "他 (曾) 说他…… 他 (曾) 告诉我说他……"
+            },
+            {
+                "id": 137,
+                "en": "A pleasant dream ",
+                "zh": "美好的梦"
+            },
+            {
+                "id": 138,
+                "en": "If… ",
+                "zh": "如果……"
+            },
+            {
+                "id": 139,
+                "en": "Is that you，John？",
+                "zh": "是你吗，约翰？"
+            },
+            {
+                "id": 140,
+                "en": "He wants to know if/why/what/when ",
+                "zh": "他想知道是否/为什么/什么/什么时候"
+            },
+            {
+                "id": 141,
+                "en": "Sally's first train ride ",
+                "zh": "萨莉第一次乘火车旅行"
+            },
+            {
+                "id": 142,
+                "en": "Someone invited Sally to a party. Sally was invited to a party.",
+                "zh": "有人邀请萨莉出席一个聚会。 萨莉应邀出席一个聚会。"
+            },
+            {
+                "id": 143,
+                "en": "A walk through the woods ",
+                "zh": "林中散步"
+            },
+            {
+                "id": 144,
+                "en": "He hasn't been served yet. He will be served soon.",
+                "zh": "还没有人来招待他？ 很快会有人来招待他的。"
+            }
+        ]
+    }
+]

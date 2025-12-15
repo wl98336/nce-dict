@@ -20,12 +20,12 @@ export class LessonContent implements OnDestroy {
   hideEN = signal(false);
   hideZH = signal(false);
 
-  private audioNames: any;
   constructor(private bookService: BookService) {
     effect(() => {
       const audioNames = this.bookService.audioFileNames();
-      const url =
-        'assets/audio/nce' + this.bookId() + '/' + audioNames.get(this.lessonId().toString());
+      const url = `assets/audio/book-${this.bookId()}/${audioNames.get(
+        this.lessonId().toString()
+      )}`;
       this.audioUrl.set(url);
     });
   }

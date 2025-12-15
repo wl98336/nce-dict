@@ -62,7 +62,16 @@
 ]
 ```
 ### 添加笔记， /assets/book-${id}/notes.md
-以课文为单位，每课以一级标题`# Lesson ${id}`开始, 格式如下
+新概念一至四册笔记来源是[https://github.com/protogenesis/New-Concept-English]
+
+以课文为单位，每课以一级标题`# Lesson ${id}`开始,其他行不能有一级标题
+
+其中id可以是以下之一
+- 数字          //笔记属于某一课
+- 数字&数字     //笔记属于某两课
+- 数字-数字     //笔记属于多课
+
+
 ```
 # Lesson 1
 
@@ -78,3 +87,10 @@
 ```
 
 ### 添加音频配置文件， /assets/book-${id}/audio.json
+以课文为单位，配置该课音频文件名`${lesson_id}: ${audioName}`，格式如下
+```
+{
+    "1": "Lesson 1 Finding Fossil man.mp3",
+    "10": "Lesson 10 Silicon valley.mp3"
+}
+```

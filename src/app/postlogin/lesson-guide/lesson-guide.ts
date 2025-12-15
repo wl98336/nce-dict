@@ -14,7 +14,10 @@ export class LessonGuide {
   studyGuideUrl = signal('');
   constructor(private bookService: BookService) {
     effect(() => {
-      const url = `assets/book-${this.bookId()}/guide/${this.lessonId()}.pdf`;
+      const guideNames = this.bookService.guideFileNames();
+      const idStr = this.lessonId().toString();
+      const fileName = guideNames.has(idStr) ? guideNames.get(idStr) : idStr + '.pdf';
+      const url = `assets/book-${this.bookId()}/guide/${fileName}`;
       this.studyGuideUrl.set(url);
     });
   }

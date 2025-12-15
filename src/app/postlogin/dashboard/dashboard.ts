@@ -31,6 +31,10 @@ export class Dashboard {
         console.log('audio file names', data);
         this.bookService.audioFileNames.set(data);
       });
+      this.bookService.loadBookGuideInfo(bookId).subscribe((data) => {
+        console.log('guide file names', data);
+        this.bookService.guideFileNames.set(data);
+      });
       this.bookService.loadBookNewWords(bookId).subscribe((data) => {
         console.log('book new words', data);
         this.bookService.bookNewWords.set(data);

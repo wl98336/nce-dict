@@ -26,9 +26,9 @@ export class LessonTyping implements OnInit, OnDestroy {
   constructor(private bookService: BookService) {
     effect(() => {
       const audioNames = this.bookService.audioFileNames();
-      const url = `assets/book-${this.bookId()}/audio/${audioNames.get(
-        this.lessonId().toString()
-      )}`;
+      const idStr = this.lessonId().toString();
+      const fileName = audioNames.has(idStr) ? audioNames.get(idStr) : idStr + '.mp3';
+      const url = `assets/book-${this.bookId()}/audio/${fileName}`;
       this.audioUrl.set(url);
     });
   }

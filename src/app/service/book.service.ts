@@ -20,6 +20,7 @@ export class BookService {
   private bookList: Book[] = [];
   bookNewWords: WritableSignal<LessonNewWords[]> = signal([]);
   audioFileNames: WritableSignal<Map<string, string>> = signal(new Map());
+  guideFileNames: WritableSignal<Map<string, string>> = signal(new Map());
   lessonContent: WritableSignal<LessonContent> = signal({
     title: { en: '', zh: '' },
     audio: '',
@@ -56,18 +57,24 @@ export class BookService {
 
   loadBookAudioInfo(id: number): Observable<Map<string, string>> {
     return this.httpService.get(`./assets/book-${id}/audio.json`).pipe(
-      map((data) => {
-        const mapData = new Map();
-        for (const key in Object.keys(data)) {
-          if (!Object.hasOwn(data, key)) continue;
-          const value = (data as any)[key];
-          mapData.set(key, value);
-        }
-        return mapData;
-      })
+      map(this.object2map)
     );
   }
 
+  loadBookGuideInfo(id: number): Observable<Map<string, string>> {
+    return this.httpService.get(`./assets/book-${id}/guide.json`).pipe(
+      map(this.object2map)
+    );
+  }
+  private object2map(data: Object): Map<string, string> {
+    const mapData = new Map();
+    for (const key in data) {
+      if (!Object.hasOwn(data, key)) continue;
+      const value = (data as any)[key];
+      mapData.set(key, value);
+    }
+    return mapData;
+  }
   loadBookNewWords(id: number): Observable<LessonNewWords[]> {
     return this.httpService.get<LessonNewWords[]>(`./assets/book-${id}/words.json`);
   }

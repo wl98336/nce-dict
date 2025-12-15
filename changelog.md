@@ -62,7 +62,7 @@
 ]
 ```
 ### 添加笔记， /assets/book-${id}/notes.md
-新概念一至四册笔记来源是[https://github.com/protogenesis/New-Concept-English]
+新概念一至四册笔记来源是[protogenesis](https://github.com/protogenesis/New-Concept-English)
 
 以课文为单位，每课以一级标题`# Lesson ${id}`开始,其他行不能有一级标题
 
@@ -86,8 +86,12 @@
 
 ```
 
-### 添加音频配置文件， /assets/book-${id}/audio.json
-以课文为单位，配置该课音频文件名`${lesson_id}: ${audioName}`，格式如下
+### 添加音频配置文件（可选）， /assets/book-${id}/audio.json
+
+以课文为单位，配置该课音频文件名`${lesson_id}: ${audioName}`，缺省使用`${lesson_id}.mp3`
+
+下面的例子中，第一颗将加载`on 1 Finding Fossil man.mp3`第二课将加载`2.mp3`
+
 ```
 {
     "1": "Lesson 1 Finding Fossil man.mp3",
@@ -97,3 +101,21 @@
 
 ### 添加音频文件， /assets/book-${id}/audio/**.mp3
 添加了第一课的音频文件作为实例，音频以课文为单位，文件名需要与audio.json中的文件名匹配
+
+### 添加导读配置文件（可选）， /assets/book-${id}/guide.json
+
+以课文为单位，配置该课音频文件名`${lesson_id}: ${fileName}`，缺省使用`${lesson_id}.pdf`
+
+下面的例子中，第一颗将加载`example.pdf`第二课将加载`2.pdf`
+
+```
+{
+    "1": "example.pdf",
+}
+```
+
+### 添加自学导读， /assets/book-${id}/audio/**.pdf
+
+添加了第一课和第二课的自学导读pdf文件（样例），测试书本和课目切换
+
+样例文件使用pdf-lib生成，样本代码分享在[pdf-lib](https://github.com/wl98336/pdf-split)

@@ -94,3 +94,6 @@
     "10": "Lesson 10 Silicon valley.mp3"
 }
 ```
+
+### 添加音频文件， /assets/book-${id}/audio/**.mp3
+添加了第一课的音频文件作为实例，音频以课文为单位，文件名需要与audio.json中的文件名匹配

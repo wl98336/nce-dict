@@ -14,8 +14,7 @@ export class LessonGuide {
   studyGuideUrl = signal('');
   constructor(private bookService: BookService) {
     effect(() => {
-      const url = 'assets/guide/nce' + this.bookId() + '/' + this.lessonId() + '.pdf';
-      console.log('colin 1111111111111111111', url);
+      const url = `assets/book-${this.bookId()}/guide/${this.lessonId()}.pdf`;
       this.studyGuideUrl.set(url);
     });
   }

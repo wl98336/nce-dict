@@ -1,0 +1,20 @@
+<div class="p-2">
+    <div class="d-flex flex-column align-items-center fs-4 p-2 position-relative">
+        <a class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            (click)="toggleEN()">{{lessonContent().title.en}}</a>
+        <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            (click)="toggleZH()">{{lessonContent().title.zh}}</a>
+        <div class="position-absolute d-flex align-items-center h-100 end-0 px-5">
+            <app-audio-player [url]="audioUrl()" [action]="audioAction()"></app-audio-player>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column fs-5 gap-2 p-2" [ngClass]="{'hide-en': hideEN(), 'hide-zh': hideZH()}">
+        @for (item of lessonContent().sentences; track $index) {
+        <div class="d-flex flex-column">
+            <span class="en">{{item.en}}</span>
+            <span class="zh text-secondary">{{item.zh}}</span>
+        </div>
+        }
+    </div>
+</div>

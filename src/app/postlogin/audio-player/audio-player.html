@@ -1,0 +1,40 @@
+<div class="d-flex flex-row gap-2 position-relative">
+    <button class="btn btn-primary btn-sm fs-5" (click)="playBtnClicked($event)">
+        <i class="bi {{playBtnIcon()}}"></i>
+    </button>
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" value="normal"
+            [checked]="selectedOption == 'normal'" (change)="changeRepeat($event)">
+        <label class="btn btn-outline-primary tooltip-container" for="btnradio1">
+            <i class="bi bi-music-note-list"></i>
+            <span class="p-1 text-nowrap tooltiptext">默认</span>
+        </label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" value="repeat"
+            [checked]="selectedOption == 'repeat'" (change)="changeRepeat($event)">
+        <label for="btnradio2" class="btn btn-outline-primary tooltip-container">
+            <i class="bi bi-repeat"></i>
+            <span class="p-1 text-nowrap tooltiptext">循环</span>
+        </label>
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" value="line"
+            [checked]="selectedOption == 'line'" (change)="changeRepeat($event)">
+        <label for="btnradio3" class="btn btn-outline-primary tooltip-container">
+            <i class="bi bi-repeat-1"></i>
+            <span class="p-1 text-nowrap tooltiptext">单句循环</span>
+        </label>
+    </div>
+    <button class="btn btn-success btn-sm fs-5" (click)="print($event)">
+        <i class="bi bi-bookmark-plus"></i>标记
+    </button>
+    
+    <div class="d-flex flex-column gap-2 position-absolute end-0 top-100 mt-1" >
+        @for (item of timeStamps; track $index) {
+        <div class="d-flex p-2 rounded-2 text-white justify-content-between gap-2" style="background-color: rgba(18,81,136,.1);">
+            <span style="white-space: nowrap;">{{item.start.toFixed(3)}} --- {{item.end.toFixed(3)}}</span>
+            <button class="btn btn-outline-light btn-sm fs-5" (click)="remove(item, $event)">
+                <i class="bi bi-trash-fill"></i>
+            </button>
+        </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.with-result {
+  .title {
+    display: none;
+  }
+}
+.result {
+  ::ng-deep b {
+    border-radius: 8px;
+    background: #0564c3;
+    padding: 0 4px;
+    color: white;
+  }
+}

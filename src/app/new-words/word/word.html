@@ -1,0 +1,8 @@
+<div class="d-flex gap-2" [ngClass]="{'hide-en': hideEN(), 'hide-zh': hideZH()}">
+    <span class="word">{{wordInfo().word}}</span>
+    @if (wordInfo().phonetic) {<span class="phonetic">{{wordInfo().phonetic}}</span>}
+    
+    @if (wordInfo().prop) {<span class="wordProp">{{wordInfo().prop}}</span>}
+
+    <span class="trans">{{wordInfo().trans}}</span>
+</div>

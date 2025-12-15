@@ -1,0 +1,31 @@
+<span class="px-3 py-2">{{book.title}}</span>
+
+<div>
+    <div class="accordion d-flex flex-column" id="accordionPanelsStayOpen">
+        @for (unit of bookUnits(); track $index) {
+        <div class="accordion-item d-flex flex-column">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" [ngClass]="{'collapsed': activedUnit()!=unit.id}"
+                    (click)="activeUnit(unit)">
+                    {{unit.en}}
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                [ngClass]="{'show':activedUnit()==unit.id}">
+                <div class="accordion-body">
+                    <ul class="list-group">
+                        @for (lesson of unit.lessons; track $index) {
+                        <button class="list-group-item list-group-item-action tooltip-container"
+                            [ngClass]="{'active':lessonId()==lesson.id}" (click)="selectLesson(lesson.id)">
+                            <span>{{lesson.id}}. {{lesson.zh}}
+                                <span class="p-1 text-nowrap tooltiptext">{{lesson.en}}</span>
+                            </span>
+                        </button>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="d-flex flex-column w-100 bg-ui-2 fs-4 p-2 py-5 gap-5 rounded-5">
+    <div class="px-sm-2 px-md-3 px-lg-5">
+        <div class="w-100 d-flex flex-column gap-4 rounded-2 px-sm-2 px-md-3 px-lg-5">
+            <h1 class="text-center min-width-375">
+                注册 </h1>
+            <div>
+                <label for="exampleFormControlInput1" class="form-label">User name</label>
+                <input type="text" class="rounded-pill form-control fs-4 p-3" id="exampleFormControlInput1"
+                    placeholder="username" [(ngModel)]="username">
+            </div>
+            <div>
+                <label for="exampleFormControlInput2" class="form-label">邮箱</label>
+                <input type="email" class="rounded-pill form-control fs-4 p-3" id="exampleFormControlInput2"
+                    placeholder="username@email.com" [(ngModel)]="email">
+            </div>
+            <div>
+                <label for="inputPassword5" class="form-label">Password</label>
+                <input type="password" id="inputPassword5" class="rounded-pill form-control fs-4 p-3"
+                    aria-describedby="passwordHelpBlock" [(ngModel)]="password">
+            </div>
+            <div>
+                <label for="inputPassword6" class="form-label">Confirm Password</label>
+                <input type="password" id="inputPassword6" class="rounded-pill form-control fs-4 p-3"
+                    aria-describedby="passwordHelpBlock" [(ngModel)]="confirmpwd">
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary rounded-pill form-control fs-5 p-3"
+                    (click)="submit($event)">注册</button>
+            </div>
+        </div>
+    </div>
+</div>

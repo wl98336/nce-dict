@@ -1,0 +1,29 @@
+.word {
+  color: rgb(29, 42, 87);
+  font-weight: 600;
+}
+.phonetic {
+  color: #455666;
+  font-family: 'Helvetica Neue';
+  opacity: 0.62;
+  &:after,
+  &:before {
+    color: #152938;
+    content: '  /  ';
+    opacity: 0.24;
+  }
+}
+.wordProp {
+  color: purple;
+  &:after {
+    content: '.';
+  }
+}
+.trans {
+  color: rgb(5, 128, 232);
+}
+
+.hide-en .word,
+.hide-zh .trans {
+  visibility: hidden;
+}

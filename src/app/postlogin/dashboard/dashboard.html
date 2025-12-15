@@ -1,0 +1,14 @@
+<div class="d-flex flex-column" style="height: 100dvh">
+    <div>
+        <nce-header></nce-header>
+    </div>
+    <div class="container-lg bg-container d-flex flex-row flex-shrink-1 flex-grow-1">
+        <nce-left-menu></nce-left-menu>
+        <div class="main-content flex-grow-1 rounded-2" style="background-color: #ebeff3;">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <div>
+        <modal-container></modal-container>
+    </div>
+</div>

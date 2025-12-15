@@ -1,0 +1,41 @@
+<div class="container-lg bg-container">
+    <nav class="navbar px-2">
+        <a class="navbar-brand text-white fs-2" href="#" style="width: 8rem; text-align: center;">NCE</a>
+        <div class="d-flex justify-content-between flex-grow-1">
+            <div class="dropdown">
+                <button class="btn btn-primary fs-4 dropdown-toggle" [ngClass]="{'show': showDropdown() }" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false" (click)="openDropdown()">
+                    {{selectedBook().zh}}
+                </button>
+                <ul class="dropdown-menu" [ngClass]="{'show': showDropdown() }">
+                    @for (item of bookList(); track $index) {
+                    <li><button class="dropdown-item fs-4" type="button" [ngClass]="{'active' : bookId() ==item.id }"
+                            (click)="selectBook(item)">{{item.id}}. {{item.zh}}</button></li>
+                    }
+                </ul>
+            </div>
+            <div class="btn-group dropdown">
+                @if (lessonId()>1) {<div class="dropstart">
+                    <button class="btn btn-primary dropdown-toggle fs-4" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" (click)="selectLesson(lessonId()-1)">
+                        <span>{{ lessonId() - 1 }}</span>
+                    </button>
+                </div>}
+
+                <button class="btn btn-primary dropdown-toggle fs-4" [ngClass]="{'show': selectingLesson() }"
+                    type="button" data-bs-toggle="dropdown" aria-expanded="false" (click)="openLessonList()">
+                    {{ lessonId() > 0 ? '第'+lessonId() + '课' : 'dropdwn to select' }}
+                </button>
+                @if(lessonId()){
+                <div class="dropend">
+                    <button class="btn btn-primary dropdown-toggle fs-4" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" (click)="selectLesson(lessonId()+1)">
+                        <span>{{ lessonId() + 1 }}</span>
+                    </button>
+                </div>
+                }
+            </div>
+        </div>
+
+    </nav>
+</div>

@@ -1,0 +1,9 @@
+<div class="d-flex flex-column p-2 rounded-2" style="background-color: #ebeff3">
+    <div class="fs-4 d-flex flex-column align-items-center"><span>Lesson {{lessonId()}} {{lessonContent().title.en}}</span></div>
+    <div class="fs-4 d-flex flex-column align-items-end">
+        <app-audio-player [url]="audioUrl()"></app-audio-player>
+    </div>
+    @for (sentence of lessonContent().sentences; track $index) {
+    <typing-sentence class="fs-5" [content]="sentence.en" (complete)="focusNextSentence($event)"></typing-sentence>
+    }
+</div>

@@ -1,0 +1,38 @@
+<div class="min-width-375 ">
+    <div class="bg-ui-2 p-2 rounded-2" [ngClass]="{'with-result': withResult()}">
+        <div class="d-flex fs-2 justify-content-center py-4"><span>新概念哪一课</span></div>
+        <div class="lookup d-flex">
+            <input type="search" id="searchInput" class="form-control fs-4 p-3 me-2" placeholder="输入单词或文本"
+                [(ngModel)]="value" (keydown)="onKeydown($event)">
+            <button class="btn btn-outline-success fs-4" (click)="lookup($event)">Search</button>
+        </div>
+        <div class="description p-3">
+            <span>{{description()}}</span>
+        </div>
+        <div class="result fs-5">
+            @if (isLesson()) {
+            <div [innerHTML]="safeHtmlContent">
+            </div>
+            }
+            @else {
+            @for (book of referList(); track $index) {
+            <div class="book ps-2 py-2">
+                <div>新概念{{book.bookId}}</div>
+                @for (lesson of book.lessons; track $index) {
+                <div class="lesson ps-2 py-2">
+                    <div><a href="" target="_blank" (click)="lessonClicked(book.bookId, lesson.lessonId, $event)">第{{lesson.lessonId}}课</a></div>
+                    @for (sentence of lesson.sentences; track $index) {
+                    <div class="sentence ps-2 py-2">
+                        <div class="en" [innerHTML]="sentence.en"> </div>
+                        <div class="zh" [innerHTML]="sentence.zh"> </div>
+                    </div>
+
+                    }
+                </div>
+                }
+            </div>
+            }
+            }
+        </div>
+    </div>
+</div>

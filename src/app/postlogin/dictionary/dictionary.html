@@ -1,0 +1,7 @@
+<div class="p-2">
+    <div role="lookup" class="d-flex">
+        <input type="search" class="form-control me-2" [(ngModel)]="value" (keydown)="onKeydown($event)">
+        <button class="btn btn-outline-success" (click)="lookup($event)">Search</button>
+    </div>
+    <div class="fs-5" [innerHTML]="safeHtmlContent"></div>
+</div>

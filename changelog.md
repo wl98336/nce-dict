@@ -6,3 +6,75 @@
 - √ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? Yes
 - √ Do you want to create a 'zoneless' application without zone.js? Yes
 - √ Which AI tools do you want to configure with Angular best practices? https://angular.dev/ai/develop-with-ai None
+
+
+## 2025年12月15日
+### 添加书本列表 /assets/books.json
+书本格式如下
+```
+[
+    {
+        "id": 1,
+        "zh": "新概念第一册",
+        "en": "First Things First",
+        "path": "book-1"
+    }
+]
+```
+### 添加单元配置，/assets/book-${id}/units.json
+配置课文所属单元，用于简化课时选择页面,格式如下
+```
+[
+    {
+        "id": 1,
+        "en": "part 1",
+        "zh": "第一部分",
+        "lessons": [
+            {
+                "id": 1,
+                "en": "Excuse me！",
+                "zh": "对不起！"
+            }
+        ]
+    }
+]
+```
+### 添加单词， /assets/book-${id}/words.json
+以课文为单位，每个单词为一个字符串，音标用[]包围，词性以.结束, 格式如下
+```
+[
+    {
+        "lesson": 1,
+        "words": [
+            "excuse [ik'skju:z] v.原谅",
+            "me [mi:, mi] pron.我(宾格)",
+            "yes [jes] ad.是的",
+            "is [iz, s, z, əz] v.be动词现在时第三人称单数",
+            "this [ðis] pron.这",
+            "your [jə:, jɔ:, jər, jɔ:r] 你的，你们的",
+            "handbag ['hændbæg] n.(女用)手提包",
+            "pardon ['pɑ:dən] int.原谅，请再说一遍",
+            "it [it] pron.它",
+            "thank you [ˈθæŋkjuː] 感谢你(们)",
+            "very much [ˈverɪ mʌtʃ] 非常地"
+        ]
+    }
+]
+```
+### 添加笔记， /assets/book-${id}/notes.md
+以课文为单位，每课以一级标题`# Lesson ${id}`开始, 格式如下
+```
+# Lesson 1
+
+#### Main knowledge
+
++ 一般疑问句的构成形式
+
+###### 一般疑问句
+
+一般疑问句将be动词提前,即将一般陈述句的be动词提前到句首
+
+
+```
+
+### 添加音频配置文件， /assets/book-${id}/audio.json

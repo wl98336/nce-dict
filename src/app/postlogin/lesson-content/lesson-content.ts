@@ -23,7 +23,7 @@ export class LessonContent implements OnDestroy {
   constructor(private bookService: BookService) {
     effect(() => {
       const audioNames = this.bookService.audioFileNames();
-      const url = `assets/audio/book-${this.bookId()}/${audioNames.get(
+      const url = `assets/book-${this.bookId()}/audio/${audioNames.get(
         this.lessonId().toString()
       )}`;
       this.audioUrl.set(url);

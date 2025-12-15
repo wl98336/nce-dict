@@ -55,7 +55,7 @@ export class BookService {
   }
 
   loadBookAudioInfo(id: number): Observable<Map<string, string>> {
-    return this.httpService.get('./assets/nce' + id + '/audio.json').pipe(
+    return this.httpService.get(`./assets/book-${id}/audio.json`).pipe(
       map((data) => {
         const mapData = new Map();
         for (const key in Object.keys(data)) {

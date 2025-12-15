@@ -36,7 +36,7 @@ export class Header {
   selectingLesson = signal(false);
 
   openLessonList(): void {
-    this.modalService.modal.set({ show: true, type: LessonSelector });
+    this.modalService.modal.set({ show: true, type: LessonSelector, header: {title: 'Select Lesson'} });
   }
   selectLesson(id: number): void {
     console.log('selected Lesson', id);

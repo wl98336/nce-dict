@@ -10,10 +10,18 @@ import { FormsModule } from '@angular/forms';
 })
 export class Forgetpassword {
   username: string = '';
-  constructor(private auth: AuthService){
+  code: string = '';
+  password: string = '';
+  constructor(private auth: AuthService) {}
+  submit(event: MouseEvent) {}
 
+  async login(event: MouseEvent) {
+    this.auth.showLoginModal();
+    event.preventDefault();
   }
-  submit(event: MouseEvent){
-    
+
+  async register(event: MouseEvent) {
+    this.auth.showRegisterModal();
+    event.preventDefault();
   }
 }

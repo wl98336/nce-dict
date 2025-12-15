@@ -22,6 +22,7 @@ import { ModalBackdrop } from './modal.backdrop';
   styleUrl: './modal.container.scss',
 })
 export class ModalContainer {
+  modal = computed(() => this.modalService.modal());
   show = computed(() => this.modalService.modal().show);
   @ViewChild('inner') innerElement!: ElementRef<HTMLDivElement>;
 
@@ -36,7 +37,14 @@ export class ModalContainer {
     effect(() => {
       const modal = this.modalService.modal();
       if (modal.show && modal.type) {
+        if (this.modalKey && this.modalMap.get(this.modalKey)) {
+          const viewRef = this.modalMap.get(this.modalKey)?.hostView;
+          if (viewRef) {
+            this.appRef.detachView(viewRef);
+          }
+        }
         this.modalKey = modal.type.name;
+        console.log('modal name', this.modalKey);
         let cref = this.modalMap.get(this.modalKey);
         if (!cref) {
           cref = createComponent(modal.type, {
@@ -63,5 +71,14 @@ export class ModalContainer {
     this.modalService.modal.update((modal) => {
       return { ...modal, show: false };
     });
+  }
+  async test1() {
+    console.log('test1');
+    
+  }
+  async test2() {
+    console.log('test2');
+    const { Login } = await import('../prelogin/login/login');
+    this.modalService.modal.set({ show: true, type: Login });
   }
 }

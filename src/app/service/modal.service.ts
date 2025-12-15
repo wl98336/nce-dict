@@ -4,5 +4,5 @@ import { Injectable, signal, Type, WritableSignal } from '@angular/core';
   providedIn: 'root',
 })
 export class ModalService {
-  modal: WritableSignal<{show: boolean, type?: Type<any>}> = signal({show: false});
+  modal: WritableSignal<{show: boolean, type?: Type<any>, header?: any, cssClasses?: string}> = signal({show: false});
 }

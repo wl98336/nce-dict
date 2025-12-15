@@ -4,6 +4,7 @@ import { environment } from '../../environments/environment';
 import { map } from 'rxjs/operators';
 import { JSEncrypt } from 'jsencrypt';
 import { isPlatformBrowser } from '@angular/common';
+import { ModalService } from './modal.service';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,11 @@ export class AuthService {
   }
   private authApi = `${environment.apiUrl}/auth`;
 
-  constructor(private http: HttpClient, @Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(
+    private http: HttpClient,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private modalService: ModalService
+  ) {
     const token = isPlatformBrowser(this.platformId) ? localStorage.getItem('token') : null;
     if (token) {
       this.user = JSON.parse('' + localStorage.getItem('user'));
@@ -49,6 +54,21 @@ export class AuthService {
   valid() {
     return this.http.get(`${this.authApi}/valid`);
   }
+
+  async showLoginModal() {
+    const { Login } = await import('../prelogin/login/login');
+    this.modalService.modal.set({ show: true, type: Login, cssClasses: 'bg-transparent' });
+  }
+
+  async showRegisterModal() {
+    const { Register } = await import('../prelogin/register/register');
+    this.modalService.modal.set({ show: true, type: Register, cssClasses: 'bg-transparent' });
+  }
+  async showForgetPassword() {
+    const { Forgetpassword } = await import('../prelogin/forgetpassword/forgetpassword');
+    this.modalService.modal.set({ show: true, type: Forgetpassword, cssClasses: 'bg-transparent' });
+  }
+
   login(username: string, password: string) {
     const encrypt = new JSEncrypt();
     encrypt.setPublicKey(this.publicKey);

@@ -12,16 +12,7 @@ export const routes: Routes = [
       {
         path: '',
         component: Refer,
-      },
-      { path: 'login', loadComponent: () => import('./prelogin/login/login').then((m) => m.Login) },
-      {
-        path: 'register',
-        loadComponent: () => import('./prelogin/register/register').then((m) => m.Register),
-      },
-      {
-        path: 'forgetpassword',
-        loadComponent: () => import('./prelogin/forgetpassword/forgetpassword').then((m) => m.Forgetpassword),
-      },
+      }
     ],
   },
   {

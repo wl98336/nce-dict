@@ -13,15 +13,22 @@ export class Register {
   email: string = '';
   password: string = '';
   confirmpwd: string = '';
-  constructor(private auth: AuthService) {}
+  constructor(private auth: AuthService) {
+    console.log('Register constructor');
+  }
   submit(event: any) {
+    if (this.password !== this.confirmpwd) return;
     this.auth.register(this.username, this.email, this.password).subscribe({
       next(data) {
-        console.log("registered", data);
+        console.log('registered', data);
       },
       error(err) {
-        console.error;
+        console.error(err);
       },
     });
+  }
+  async login(event: MouseEvent) {
+    this.auth.showLoginModal();
+    event.preventDefault();
   }
 }

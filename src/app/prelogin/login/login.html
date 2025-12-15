@@ -2,14 +2,14 @@
     <div class="px-sm-2 px-md-3 px-lg-5">
         <div class="w-100 d-flex flex-column gap-4 rounded-2 px-sm-2 px-md-3 px-lg-5">
             <h1 class="min-width-375 text-center">
-                Sign In </h1>
+                登录 </h1>
             <div>
-                <label for="inputUsername" class="form-label">User name</label>
+                <label for="inputUsername" class="form-label">用户名</label>
                 <input type="text" class="rounded-pill form-control fs-4 p-3" id="inputUsername" autocomplete="off"
                     (change)="updateUsername($event)" />
             </div>
             <div>
-                <label for="inputPassword5" class="form-label">Password</label>
+                <label for="inputPassword5" class="form-label">密码</label>
                 <input type="password" id="inputPassword5" class="rounded-pill form-control fs-4 p-3"
                     aria-describedby="passwordHelpBlock" [(ngModel)]="password">
             </div>
@@ -17,10 +17,14 @@
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="checkDefault">
                     <label class="form-check-label" for="checkDefault">
-                        Remeber password
+                        记住账号密码
                     </label>
                 </div>
-
+                <div class="d-flex">
+                    <button type="button" class="btn btn-link" (click)="forgetPassword($event)">忘记密码</button>
+                    <div class="vr my-2 fs-6"></div>
+                    <button type="button" class="btn btn-link" (click)="register($event)">注册</button>
+                </div>
             </div>
             <div>
                 <button type="button" class="btn btn-primary rounded-pill form-control fs-5 p-3"
@@ -28,6 +32,4 @@
             </div>
         </div>
     </div>
-
-
 </div>

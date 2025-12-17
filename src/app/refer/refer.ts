@@ -20,6 +20,8 @@ export class Refer {
   referList: WritableSignal<any[]> = signal([]);
   value: string = '';
   safeHtmlContent: SafeHtml = '';
+  showSuggestion = signal(false);
+  suggestion: WritableSignal<Array<string>> = signal([]);
   private descriptions = ['输入中文英文皆可', '没有记录'];
   constructor(
     private dictService: DictService,
@@ -27,16 +29,34 @@ export class Refer {
     private auth: AuthService,
     private router: Router,
     private bookService: BookService
-  ) {
-    console.log('Refer constructor');
+  ) {}
+  onFocus() {
+    if (!this.value) {
+      this.suggestion.set([]);
+    }
+    this.showSuggestion.set(true);
   }
 
+  valueChanged() {
+    this.dictService.getNceIndex().subscribe((data) => {
+      const indexStart = data.findIndex((str) => str.startsWith(this.value));
+      const suggestion = data.slice(indexStart, indexStart + 10);
+      if (suggestion.length) {
+        this.suggestion.set(suggestion);
+      }
+    });
+  }
   onKeydown(event: KeyboardEvent) {
     if (event.key == 'Enter') {
       this.lookup(event);
     }
   }
+  selectSuggestion(event: any, value: string) {
+    this.value = value;
+    this.lookup(event);
+  }
   lookup(event: any): void {
+    this.showSuggestion.set(false);
     if (!this.value) {
       this.withResult.set(false);
       this.description.set(this.descriptions[0]);
@@ -52,6 +72,8 @@ export class Refer {
           this.referList.set([]);
           this.description.set(this.descriptions[1]);
           return;
+        } else {
+          this.description.set('');
         }
         const lessonEntryPatt = /^C[1-4]\d{3}$/;
         const lesson = lessonEntryPatt.test(keyText);

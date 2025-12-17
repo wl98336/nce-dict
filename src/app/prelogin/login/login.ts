@@ -33,7 +33,6 @@ export class Login {
     });
   }
   updateUsername(event: Event) {
-    console.log("save", this.save);
     this.haveLogin.set(false);
     this.username = (event.target as HTMLInputElement).value;
   }

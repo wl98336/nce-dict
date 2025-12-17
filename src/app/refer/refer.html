@@ -1,10 +1,17 @@
 <div class="min-width-375 ">
     <div class="bg-ui-2 p-2 rounded-2" [ngClass]="{'with-result': withResult()}">
         <div class="d-flex fs-2 justify-content-center py-4"><span>新概念哪一课</span></div>
-        <div class="lookup d-flex">
+        <div class="lookup d-flex position-relative">
             <input type="search" id="searchInput" class="form-control fs-4 p-3 me-2" placeholder="输入单词或文本"
-                [(ngModel)]="value" (keydown)="onKeydown($event)">
+                autocomplete="off" [(ngModel)]="value" (keydown)="onKeydown($event)" (input)="valueChanged()"
+                (focus)="onFocus()">
             <button class="btn btn-outline-success fs-4" (click)="lookup($event)">Search</button>
+            <div [ngClass]="{'d-flex flex-column gap-2 p-2': showSuggestion(), 'd-none': !showSuggestion()}"
+                class="position-absolute top-100 start-0 end-0 fs-5 rounded-2 bg-white border border-secondary shadow">
+                @for (item of suggestion(); track $index) {
+                <li><a class="dropdown-item" href="#" (click)="selectSuggestion($event, item)">{{item}}</a></li>
+                }
+            </div>
         </div>
         <div class="description p-3">
             <span>{{description()}}</span>
@@ -20,7 +27,9 @@
                 <div>新概念{{book.bookId}}</div>
                 @for (lesson of book.lessons; track $index) {
                 <div class="lesson ps-2 py-2">
-                    <div><a href="" target="_blank" (click)="lessonClicked(book.bookId, lesson.lessonId, $event)">第{{lesson.lessonId}}课</a></div>
+                    <div><a href="" target="_blank"
+                            (click)="lessonClicked(book.bookId, lesson.lessonId, $event)">第{{lesson.lessonId}}课</a>
+                    </div>
                     @for (sentence of lesson.sentences; track $index) {
                     <div class="sentence ps-2 py-2">
                         <div class="en" [innerHTML]="sentence.en"> </div>

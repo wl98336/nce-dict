@@ -69,7 +69,7 @@ export class AuthService {
     this.modalService.modal.set({ show: true, type: Forgetpassword, cssClasses: 'bg-transparent' });
   }
 
-  login(username: string, password: string) {
+  login(username: string, password: string, save: boolean) {
     const encrypt = new JSEncrypt();
     encrypt.setPublicKey(this.publicKey);
     const encryptpwd = encrypt.encrypt(password);
@@ -78,8 +78,10 @@ export class AuthService {
         const { username, role, token } = data as any;
         this.user = { username, role };
         this.userSg.set(this.user);
-        localStorage.setItem('user', JSON.stringify(this.user));
-        localStorage.setItem('token', token);
+        if (save) {
+          localStorage.setItem('user', JSON.stringify(this.user));
+          localStorage.setItem('token', token);
+        }
         return data;
       })
     );

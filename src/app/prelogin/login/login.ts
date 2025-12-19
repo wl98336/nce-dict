@@ -36,7 +36,7 @@ export class Login {
     this.haveLogin.set(false);
     this.username = (event.target as HTMLInputElement).value;
   }
-  rememberChanged(event: Event){
+  rememberChanged(event: Event) {
     this.save = (event.target as HTMLInputElement).checked;
   }
   async forgetPassword(event: MouseEvent) {
@@ -51,15 +51,16 @@ export class Login {
     if (this.haveLogin()) {
       this.router.navigate(['/dashboard']);
       this.modalService.modal.set({ show: false, clean: true });
+    } else {
+      this.auth.login(this.username, this.password, this.save).subscribe({
+        next: (data) => {
+          this.router.navigate(['/dashboard']);
+          this.modalService.modal.set({ show: false, clean: true });
+        },
+        error: (error) => {
+          console.error('login error', error);
+        },
+      });
     }
-    this.auth.login(this.username, this.password, this.save).subscribe({
-      next: (data) => {
-        this.router.navigate(['/dashboard']);
-        this.modalService.modal.set({ show: false, clean: true });
-      },
-      error: (error) => {
-        console.error('login error', error);
-      },
-    });
   }
 }

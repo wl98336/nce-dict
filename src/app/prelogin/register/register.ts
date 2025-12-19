@@ -27,7 +27,7 @@ export class Register {
       },
     });
   }
-  async login(event: MouseEvent) {
+  login(event: MouseEvent) {
     this.auth.showLoginModal();
     event.preventDefault();
   }

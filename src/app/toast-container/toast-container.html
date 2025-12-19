@@ -1,0 +1,22 @@
+<div class="toast-container position-fixed top-0 start-50 translate-middle-x">
+    @for (item of toastList(); track $index) {
+    <div class="toast show {{item.severity}}" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header d-flex gap-2 fs-5">
+            <i class="bi bi-exclamation-circle-fill"></i>
+            <strong class="me-auto"> {{item.title}} </strong>
+            <small>{{item.subTitle}}</small>
+
+            <button type="button" class="btn-close" aria-label="Close" (click)="onReject(item)"></button>
+        </div>
+        <div class="toast-body fs-4">
+            {{item.msg}}
+            <div class="mt-2 pt-2 d-flex justify-content-around">
+                <button type="button" class="btn btn-primary" (click)="onConfirm(item)">{{item.confirmLbl}}</button>
+                <button type="button" class="btn btn-secondary" (click)="onReject(item)">{{item.rejectLbl}}</button>
+            </div>
+        </div>
+
+    </div>
+    }
+
+</div>

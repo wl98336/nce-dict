@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, signal, WritableSignal } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { DictService } from '../service/dict.service';
 import { FormsModule } from '@angular/forms';
@@ -6,6 +6,7 @@ import { NgClass } from '@angular/common';
 import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
 import { BookService } from '../service/book.service';
+import { ToastService } from '../service/toast.service';
 
 @Component({
   selector: 'app-refer',
@@ -28,7 +29,8 @@ export class Refer {
     private sanitizer: DomSanitizer,
     private auth: AuthService,
     private router: Router,
-    private bookService: BookService
+    private bookService: BookService,
+    private toastService: ToastService
   ) {}
   onFocus() {
     if (!this.value) {
@@ -124,8 +126,14 @@ export class Refer {
         }, [] as Array<any>);
         this.referList.set(referList);
       },
-      error: (HttpErrorResponse) => {
-        console.log(HttpErrorResponse.message); // show error message, if any.
+      error: (err) => {
+        this.toastService.showToast({
+          severity: 'danger',
+          title: 'Server Error',
+          msg: 'Server Unknow Error',
+          confirmLbl: 'Ok',
+          rejectLbl: 'Close',
+        });
       },
     });
   }
@@ -136,8 +144,18 @@ export class Refer {
     if (this.auth.isCustomer()) {
       this.router.navigate(['/dashboard/read']);
     } else {
-      this.auth.toast.set('need_signon');
+      this.toastService.showToast({
+        severity: 'info',
+        title: '未登录',
+        msg: '登陆后使用全部功能',
+        confirmLbl: '去登陆',
+        rejectLbl: '取消',
+        onConfirm: this.onConfirm,
+      });
     }
     event?.preventDefault();
   }
+  onConfirm = () => {
+    this.auth.showLoginModal();
+  };
 }

@@ -15,7 +15,7 @@ export class Forgetpassword {
   constructor(private auth: AuthService) {}
   submit(event: MouseEvent) {}
 
-  async login(event: MouseEvent) {
+  login(event: MouseEvent) {
     this.auth.showLoginModal();
     event.preventDefault();
   }

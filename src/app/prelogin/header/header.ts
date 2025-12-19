@@ -10,7 +10,7 @@ import { AuthService } from '../../service/auth.service';
 export class Header {
   user = computed(() => this.auth.userSg());
   constructor(private auth: AuthService) {}
-  async login(event: Event) {
+  login(event: Event) {
     this.auth.showLoginModal();
   }
 }

@@ -11,7 +11,6 @@ import { ModalService } from './modal.service';
 })
 export class AuthService {
   publicKey: string = '';
-  toast = signal('');
   userSg: WritableSignal<{ username?: string; role?: string }> = signal({});
   user: { username?: string; role?: string } = {};
   isCustomer() {
@@ -55,9 +54,11 @@ export class AuthService {
     return this.http.get(`${this.authApi}/valid`);
   }
 
-  async showLoginModal() {
-    const { Login } = await import('../prelogin/login/login');
-    this.modalService.modal.set({ show: true, type: Login, cssClasses: 'bg-transparent' });
+  showLoginModal() {
+    import('../prelogin/login/login').then((m)=>{
+      this.modalService.modal.set({ show: true, type: m.Login, cssClasses: 'bg-transparent' });
+    });
+    
   }
 
   async showRegisterModal() {

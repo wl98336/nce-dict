@@ -1,0 +1,20 @@
+.toast {
+  --bs-bg-opacity: 0.25;
+  --bs-toast-header-color: white;
+
+  &.danger {
+    --bs-toast-header-bg: rgba(var(--bs-danger-rgb));
+  }
+  &.info {
+    --bs-toast-header-bg: rgba(var(--bs-info-rgb));
+  }
+  &.success {
+    --bs-toast-header-bg: rgba(var(--bs-success-rgb));
+  }
+  &.primary {
+    --bs-toast-header-bg: rgba(var(--bs-primary-rgb));
+  }
+  .toast-body {
+    color: var(--bs-toast-header-bg);
+  }
+}

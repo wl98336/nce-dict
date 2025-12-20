@@ -139,21 +139,10 @@ export class Refer {
   }
 
   lessonClicked(bookId: number, lessonId: number, event: Event) {
+    event?.preventDefault();
     this.bookService.chooseBook(bookId);
     this.bookService.chooseLesson(lessonId);
-    if (this.auth.isCustomer()) {
-      this.router.navigate(['/dashboard/read']);
-    } else {
-      this.toastService.showToast({
-        severity: 'info',
-        title: '未登录',
-        msg: '登陆后使用全部功能',
-        confirmLbl: '去登陆',
-        rejectLbl: '取消',
-        onConfirm: this.onConfirm,
-      });
-    }
-    event?.preventDefault();
+    this.router.navigate(['/dashboard/read']);
   }
   onConfirm = () => {
     this.auth.showLoginModal();

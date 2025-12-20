@@ -18,17 +18,6 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     loadComponent: () => import('./postlogin/dashboard/dashboard').then((m) => m.Dashboard),
-    canActivate: [
-      () => {
-        const router = inject(Router);
-        const authService = inject(AuthService);
-        if (!authService.isCustomer()) {
-          const loginPath = router.parseUrl('/login');
-          return new RedirectCommand(loginPath);
-        }
-        return true;
-      },
-    ],
     loadChildren:() => import('./postlogin/dashboard/dashboard.routes').then((m)=> m.routes)
   },
   {

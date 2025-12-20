@@ -2,7 +2,7 @@ import { Component, computed } from '@angular/core';
 import { Toast, ToastService } from '../service/toast.service';
 
 @Component({
-  selector: 'app-toast-container',
+  selector: 'toast-container',
   imports: [],
   templateUrl: './toast-container.html',
   styleUrl: './toast-container.scss',

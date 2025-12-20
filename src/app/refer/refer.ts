@@ -56,6 +56,7 @@ export class Refer {
   selectSuggestion(event: any, value: string) {
     this.value = value;
     this.lookup(event);
+    event.preventDefault();
   }
   lookup(event: any): void {
     this.showSuggestion.set(false);

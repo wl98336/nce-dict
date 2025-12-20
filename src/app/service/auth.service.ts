@@ -55,10 +55,9 @@ export class AuthService {
   }
 
   showLoginModal() {
-    import('../prelogin/login/login').then((m)=>{
+    import('../prelogin/login/login').then((m) => {
       this.modalService.modal.set({ show: true, type: m.Login, cssClasses: 'bg-transparent' });
     });
-    
   }
 
   async showRegisterModal() {
@@ -79,10 +78,8 @@ export class AuthService {
         const { username, role, token } = data as any;
         this.user = { username, role };
         this.userSg.set(this.user);
-        if (save) {
-          localStorage.setItem('user', JSON.stringify(this.user));
-          localStorage.setItem('token', token);
-        }
+        localStorage.setItem('user', JSON.stringify(this.user));
+        localStorage.setItem('token', token);
         return data;
       })
     );

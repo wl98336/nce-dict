@@ -12,13 +12,17 @@ export const routes: Routes = [
       {
         path: '',
         component: Refer,
-      }
+      },
+      {
+        path: 'about',
+        loadComponent: () => import('./prelogin/about/about').then((m) => m.About),
+      },
     ],
   },
   {
     path: 'dashboard',
     loadComponent: () => import('./postlogin/dashboard/dashboard').then((m) => m.Dashboard),
-    loadChildren:() => import('./postlogin/dashboard/dashboard.routes').then((m)=> m.routes)
+    loadChildren: () => import('./postlogin/dashboard/dashboard.routes').then((m) => m.routes),
   },
   {
     path: '**',

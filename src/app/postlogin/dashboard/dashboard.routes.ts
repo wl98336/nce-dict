@@ -1,4 +1,4 @@
-import { RedirectCommand, Router, Routes } from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot, Routes } from '@angular/router';
 import { NewWords } from '../../new-words/new-words';
 import { Refer } from '../../refer/refer';
 import { Dictionary } from '../dictionary/dictionary';
@@ -10,8 +10,9 @@ import { inject } from '@angular/core';
 import { AuthService } from '../../service/auth.service';
 import { ToastService } from '../../service/toast.service';
 
-const canActiveFn = () => {
-  const router = inject(Router);
+const canActiveFn = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
+  console.log("canActiveFn", route, state);
+  const url = state.url;
   const authService = inject(AuthService);
 
   if (!authService.isCustomer()) {
@@ -22,7 +23,7 @@ const canActiveFn = () => {
       msg: '登陆后使用全部功能',
       confirmLbl: '去登陆',
       rejectLbl: '取消',
-      onConfirm: () => authService.showLoginModal(),
+      onConfirm: () => authService.showLoginModal(url),
     });
     return false;
   }

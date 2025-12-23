@@ -54,9 +54,9 @@ export class AuthService {
     return this.http.get(`${this.authApi}/valid`);
   }
 
-  showLoginModal() {
+  showLoginModal(nextNav?: string) {
     import('../prelogin/login/login').then((m) => {
-      this.modalService.modal.set({ show: true, type: m.Login, cssClasses: 'bg-transparent' });
+      this.modalService.modal.set({ show: true, type: m.Login, cssClasses: 'bg-transparent', nextNav: nextNav });
     });
   }
 

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
@@ -16,6 +16,7 @@ export class Login {
   username: string = '';
   password: string = '';
   save: boolean = false;
+  nextNav = input('');
   constructor(
     private auth: AuthService,
     private router: Router,
@@ -54,7 +55,8 @@ export class Login {
     } else {
       this.auth.login(this.username, this.password, this.save).subscribe({
         next: (data) => {
-          this.router.navigate(['/dashboard']);
+          const nextUrl = this.nextNav() ? this.nextNav() : '/dashboard';
+          this.router.navigate([nextUrl]);
           this.modalService.modal.set({ show: false, clean: true });
         },
         error: (error) => {

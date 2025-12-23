@@ -2,8 +2,8 @@
 
 
 # assets not to push
-/src/assets/book-*/audio
-/src/assets/book-*/guide
+/src/assets
+
 
 
 # Compiled output

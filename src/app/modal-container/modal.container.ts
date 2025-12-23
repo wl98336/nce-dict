@@ -56,6 +56,7 @@ export class ModalContainer {
           });
           this.modalMap.set(modal.type.name, cref);
         }
+        cref.setInput("nextNav", modal.nextNav);
         this.appRef.attachView(cref.hostView);
         this.innerElement.nativeElement.appendChild(
           (cref.hostView as EmbeddedViewRef<any>).rootNodes[0]

@@ -27,6 +27,11 @@
               },
               {
                 "glob": "**/*",
+                "input": "public_mdd",
+                "output": "/mdd/"
+              },
+              {
+                "glob": "**/*",
                 "input": "node_modules/ngx-extended-pdf-viewer/assets/",
                 "output": "/assets/"
               },

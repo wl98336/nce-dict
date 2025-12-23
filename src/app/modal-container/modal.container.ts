@@ -36,16 +36,16 @@ export class ModalContainer {
   ) {
     effect(() => {
       const modal = this.modalService.modal();
-      if(modal.clean){
+      if (this.modalKey && this.modalMap.get(this.modalKey)) {
+        const viewRef = this.modalMap.get(this.modalKey)?.hostView;
+        if (viewRef) {
+          this.appRef.detachView(viewRef);
+        }
+      }
+      if (modal.clean) {
         this.modalMap.clear();
       }
       if (modal.show && modal.type) {
-        if (this.modalKey && this.modalMap.get(this.modalKey)) {
-          const viewRef = this.modalMap.get(this.modalKey)?.hostView;
-          if (viewRef) {
-            this.appRef.detachView(viewRef);
-          }
-        }
         this.modalKey = modal.type.name;
         console.log('modal name', this.modalKey);
         let cref = this.modalMap.get(this.modalKey);
@@ -56,7 +56,7 @@ export class ModalContainer {
           });
           this.modalMap.set(modal.type.name, cref);
         }
-        cref.setInput("nextNav", modal.nextNav);
+        cref.setInput('nextNav', modal.nextNav);
         this.appRef.attachView(cref.hostView);
         this.innerElement.nativeElement.appendChild(
           (cref.hostView as EmbeddedViewRef<any>).rootNodes[0]
